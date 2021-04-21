@@ -1,0 +1,9 @@
+<h1>Log In</h1>
+<%= form_tag({action: 'create'}, {method: 'post'})  do %>
+    <%= text_field :user, :name, placeholder: "Name" %>
+    <%= password_field :user, :password, placeholder: "Password" %>
+    <%= password_field :user, :password_confirmation, placeholder: "Re-enter Password" %>
+    <input type='submit', value="Log In">
+<% end %>
+
+<h1><%= link_to "Or Sign Up", signup_path %></h1>
